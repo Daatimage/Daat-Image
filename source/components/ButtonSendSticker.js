@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Text, Image } from '@skynexui/components';
+import { BsFillEmojiSmileFill } from "react-icons/bs";
 import appConfig from '../../config.json';
 
 export function ButtonSendSticker(props) {
@@ -9,6 +10,7 @@ export function ButtonSendSticker(props) {
     <Box
       styleSheet={{
         position: 'relative',
+        margin: '2px',
       }}
     >
       <Button
@@ -24,12 +26,12 @@ export function ButtonSendSticker(props) {
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: appConfig.theme.colors.neutrals[550],
-          filter: isOpen ? 'grayscale(0)' : 'grayscale(1)',
+          filter: 'grayscale(1)',
           hover: {
-            filter: 'grayscale(0)',
+            filter: 'grayscale(1)',
           }
         }}
-        label="😋"
+        label= {<BsFillEmojiSmileFill/>}
         onClick={() => setOpenState(!isOpen)}
       />
       
@@ -47,7 +49,7 @@ export function ButtonSendSticker(props) {
             },
             height: '300px',
             right: '30px',
-            bottom: '30px',
+            bottom: '50px',
             padding: '16px',
             boxShadow: 'rgba(4, 4, 5, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.24) 0px 8px 16px 0px',
           }}

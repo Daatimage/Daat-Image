@@ -65,7 +65,7 @@ export default function PaginaInicial() {
             as="form"
             onSubmit={function (infosDoEvento) {
                 infosDoEvento.preventDefault()
-                console.log('Alguém submeteu o form');
+                // console.log('Alguém submeteu o form');
                 roteamento.push(`/chat?username=${username}`);
                 //window.location.href = '/chat';
             }}
@@ -82,7 +82,7 @@ export default function PaginaInicial() {
             <TextField
               value={username}
               onChange={function (event) {
-                console.log('usuario digitou', event.target.value);
+                // console.log('usuario digitou', event.target.value);
                 //onde está o valor?
                 const valor = event.target.value;
                 // trocar o valor da variável
